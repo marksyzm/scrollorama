@@ -407,6 +407,9 @@
 			delete scrollorama;
 		};
 		
+		//make the block array public so it can be manipulated i.e. for responsive layouts
+		scrollorama.blocks = blocks;
+		
 		init();
 		
 		return scrollorama;
