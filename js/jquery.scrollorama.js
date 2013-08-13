@@ -224,7 +224,14 @@
 			}
 			else if(prop === 'text-shadow' ) {
 				target.css(prop,'0px 0px '+val+'px #ffffff');
-			} else {
+			}
+	        else if(prop === 'blur') {
+                if (!val) {
+                    target.css(browserPrefix+"filter", "none");
+                } else {
+                    target.css(browserPrefix+"filter", prop+"("+val+"px)");
+                }
+            } else {
 				if (anim.suffix) {
 					target.css(prop, val + anim.suffix);
 				} else {
